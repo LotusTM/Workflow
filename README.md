@@ -22,7 +22,7 @@ Git
 
 Для версирования используется [Git](http://git-scm.com/).
 
-Основными средствами для работы с Git являются [SmartGitHg](http://www.syntevo.com/smartgithg/) и [Github](https://github.com/).
+Основными средствами для работы с Git являются [SmartGitHg](http://www.syntevo.com/smartgithg/) и [GitHub](https://github.com/).
 
 
 # Scaffolding
@@ -30,31 +30,33 @@ Git
 Репозитарий имеет структуру следующего вида:
 
 ```
-├── app — основное приложение
-│   ├── assets — статические элементы*
+├── build
+│   ├── assets
 │   │   ├── fonts
 │   │   ├── images
-│   │   └── ...
-|   ├── css
-|   ├── js
+│   │   ├── sprites
+│   │   ├── scripts
+│   │   └── styles
+|   ├── index.html
 |   └── ...
-├── src — исходные файлы для компиляции
+├── source
+│   ├── boilerplates
 │   ├── fonts
 │   ├── images
-│   ├── js
+│   ├── layouts
+│   │   └── *.nj
+│   ├── scripts
 │   │   └── *.js
-│   ├── sass
+│   ├── styles
 │   |   └── *.scss
-│   └── templates
-│       └── *.twig
 ├── ...
-├── package.json
-├── README.md
 ├── .editorconfig
-└── .gitignore
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
-_\* как правило, ассеты вынесены на поддомен и подключены субмодулем для оптимизации процессов деплоя и уменьшения размера основного рабочего репозитария_
+_\* как правило, бинарные и медиа ассеты вынесены на поддомен и подключены субмодулем для оптимизации процессов деплоя и уменьшения размера основного рабочего репозитария_
 
 
 ### Ветки
